@@ -2,7 +2,7 @@
 
 Structured Python notebooks for engineers building agentic AI systems — LLM APIs, tool use, agent loops, memory/RAG, multi-agent orchestration, and production serving.
 
-Companion project to [ml-engineering-drills](../ml-engineering-drills) — same drill format (lesson → exercises → hidden solutions), but each lesson opens with a **context section**: the real-world problem being solved, a common production pitfall, and where the pattern shows up in actual agent frameworks. Explanations are deliberately more thorough here than in the base ML repo, without cutting technical depth — every exercise still has a real, checkable solution.
+Companion project to [ml-engineering-drills](../ml-engineering-drills): same ingredients (lesson, exercises, hidden solutions), different teaching order. Each section opens with a short orientation, then puts code in front of you that you run *before* reading the explanation. Pitfalls are demonstrated rather than announced, usually as a cell written to fail on purpose. Explanations are deliberately more thorough here than in the base ML repo, without cutting technical depth: every exercise has a real, checkable solution.
 
 ---
 
@@ -97,7 +97,14 @@ Companion project to [ml-engineering-drills](../ml-engineering-drills) — same 
 
 ## Usage
 
-Open notebooks in Jupyter or VS Code and work through the modules in order. Each section follows the pattern: **context** (why this matters, where it bites in production) → **lesson** (annotated examples) → **exercises** (hidden solutions behind `# SOLUTION` comments).
+Open notebooks in Jupyter or VS Code and work through the modules in order. Every section has the same shape:
+
+1. A short **orientation**: what this covers and why it matters for an agent.
+2. Alternating **code you run** and **short lessons** explaining what you just saw.
+3. **Three exercises** that build up. The first confirms you followed, the second has most of the code already written, the third you write yourself.
+4. Anything genuinely advanced is marked `OPTIONAL STRETCH` and sits off the main path.
+
+Lesson cells run with or without an API key. Without one they print the exact JSON payload that would have been sent. **Exercises never need a key**: they run against recorded fixtures and pure logic, and a `check()` helper reports `PASS` or `FAIL` against the expected result, so a solution is deterministically right or wrong.
 
 ## Tags
 
